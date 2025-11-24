@@ -1,0 +1,174 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Aisha",
+      "lastName": "Khan",
+      "age": 29,
+      "email": "aisha.khan@example.com",
+      "phone": "+971 50 111 2233",
+      "image": "https://randomuser.me/api/portraits/women/75.jpg",
+      "company": {
+        "department": "Engineering",
+        "title": "Senior Frontend Engineer"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 2,
+      "firstName": "Omar",
+      "lastName": "Hassan",
+      "age": 34,
+      "email": "omar.hassan@example.com",
+      "phone": "+971 50 222 3344",
+      "image": "https://randomuser.me/api/portraits/men/71.jpg",
+      "company": {
+        "department": "Product",
+        "title": "Product Manager"
+      },
+      "address": {
+        "city": "Abu Dhabi",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 3,
+      "firstName": "Sara",
+      "lastName": "Youssef",
+      "age": 27,
+      "email": "sara.youssef@example.com",
+      "phone": "+971 55 333 4455",
+      "image": "https://randomuser.me/api/portraits/women/32.jpg",
+      "company": {
+        "department": "Design",
+        "title": "Senior UX Designer"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 4,
+      "firstName": "Khalid",
+      "lastName": "Al Mansoori",
+      "age": 41,
+      "email": "khalid.mansoori@example.com",
+      "phone": "+971 55 444 5566",
+      "image": "https://randomuser.me/api/portraits/men/11.jpg",
+      "company": {
+        "department": "Leadership",
+        "title": "Head of Engineering"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 5,
+      "firstName": "Layla",
+      "lastName": "Rahman",
+      "age": 31,
+      "email": "layla.rahman@example.com",
+      "phone": "+971 55 555 6677",
+      "image": "https://randomuser.me/api/portraits/women/5.jpg",
+      "company": {
+        "department": "HR",
+        "title": "HR Business Partner"
+      },
+      "address": {
+        "city": "Sharjah",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 6,
+      "firstName": "Yusuf",
+      "lastName": "Ali",
+      "age": 30,
+      "email": "yusuf.ali@example.com",
+      "phone": "+971 50 666 7788",
+      "image": "https://randomuser.me/api/portraits/men/24.jpg",
+      "company": {
+        "department": "Engineering",
+        "title": "Backend Engineer"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 7,
+      "firstName": "Mariam",
+      "lastName": "Saeed",
+      "age": 26,
+      "email": "mariam.saeed@example.com",
+      "phone": "+971 58 777 8899",
+      "image": "https://randomuser.me/api/portraits/women/15.jpg",
+      "company": {
+        "department": "Operations",
+        "title": "Operations Specialist"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 8,
+      "firstName": "Hassan",
+      "lastName": "Rizvi",
+      "age": 37,
+      "email": "hassan.rizvi@example.com",
+      "phone": "+971 52 888 9900",
+      "image": "https://randomuser.me/api/portraits/men/44.jpg",
+      "company": {
+        "department": "Finance",
+        "title": "Finance Manager"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 9,
+      "firstName": "Noor",
+      "lastName": "Al Farsi",
+      "age": 33,
+      "email": "noor.alfarsi@example.com",
+      "phone": "+971 52 999 0011",
+      "image": "https://randomuser.me/api/portraits/women/48.jpg",
+      "company": {
+        "department": "Marketing",
+        "title": "Growth Marketing Lead"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    },
+    {
+      "id": 10,
+      "firstName": "Zaid",
+      "lastName": "Ibrahim",
+      "age": 28,
+      "email": "zaid.ibrahim@example.com",
+      "phone": "+971 50 101 2020",
+      "image": "https://randomuser.me/api/portraits/men/52.jpg",
+      "company": {
+        "department": "Data",
+        "title": "Data Analyst"
+      },
+      "address": {
+        "city": "Dubai",
+        "country": "United Arab Emirates"
+      }
+    }
+  ]
+}

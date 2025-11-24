@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Employee Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header__left">
+        <h1>Employee Management</h1>
+        <p class="subtitle">
+          Search, filter, and manage employees from live API data.
+        </p>
+      </div>
+      <div class="app-header__right">
+        <button
+          class="btn btn-ghost"
+          id="refresh-btn"
+          title="Reload data from API"
+        >
+          ⟳ Refresh
+        </button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="controls-panel">
+        <div id="search-component"></div>
+
+        <div class="controls-panel__right">
+          <div class="export-group">
+            <span class="export-group__label">Export current view:</span>
+            <button class="btn btn-outline" data-export="csv">CSV</button>
+            <button class="btn btn-outline" data-export="json">JSON</button>
+          </div>
+
+          <div id="pagination-component"></div>
+        </div>
+      </section>
+
+      <section class="stats-panel">
+        <div id="stats-summary"></div>
+      </section>
+
+      <section class="table-panel">
+        <div id="table-component"></div>
+        <div id="table-loader" class="table-loader">
+          <div class="spinner"></div>
+          <p>Loading employees from API...</p>
+        </div>
+        <div id="table-error" class="table-error hidden"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span
+        >Employee Management System &middot; Pure JavaScript (ES6+) &middot;
+        Virtual Scrolling</span
+      >
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

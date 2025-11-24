@@ -1,56 +1,70 @@
 # Employee Management System
 
-*A lightweight, modular frontend application built with modern JavaScript (ES6+) and no frontend frameworks.*
+*A modular JavaScript application for managing and browsing employee records, built without any frontend frameworks.*
 
-This project is a small but complete Employee Management System built with **pure JavaScript**, structured into logical layers (API, Models, Services, UI Components). The goal was to keep the architecture clean, maintainable and easy to extend, while still covering all functional requirements such as search, filtering, pagination, data export, and smooth table rendering with virtual scrolling.
+<p align="center">
+  <img src="assets/screenshot.png" alt="Application Screenshot" width="100%" />
+</p>
 
 ---
 
 ## Overview
 
-The application loads employee data from a public API and displays it in a dynamic, interactive dashboard-style UI. Users can:
+This project is a lightweight Employee Management System created using **pure JavaScript (ES6+), HTML, and CSS**, following a clean, modular structure.
+It demonstrates how a well-organized frontend can be built without React, Vue, or any third-party libraries.
 
-* Search employees by name, email, role, department, etc.
-* Filter by one or multiple departments
-* Navigate using pagination and configurable page sizes
-* Export the current (filtered) view to CSV or JSON
-* Scroll large datasets efficiently with virtualized rows
-* Fall back to a local JSON file if the remote API is unavailable
-
-The project does not require any bundlers or frameworks. Everything is written in modular ES6 JavaScript and runs in any modern browser.
+The application retrieves employee data from a public API and displays it through a modern dashboard interface. It includes searching, filtering, pagination, CSV/JSON export, virtual scrolling for performance, and a graceful fallback to local data when the remote API is unavailable.
 
 ---
 
-## Main Features
+## Key Features
 
-### ✔ Clean modular architecture
+### **• Live API data**
 
-UI, data, models, services and helpers live in separate folders to avoid mixing responsibilities.
+The app loads employee information from a public open-data API.
 
-### ✔ Remote API + Local fallback
+If the remote API is temporarily unavailable, the system automatically falls back to a small local JSON dataset included in the project.
 
-The app fetches from:
-`https://dummyjson.com/users`
+---
 
-If the remote API ever fails (offline, rate limit, etc.), it automatically loads data from:
+### **• Search and Filtering**
 
-`api-data/employees.json`
-
-This makes the project self-contained and always functional.
-
-### ✔ Practical UI functionality
-
-* Fast debounced search
+* Search by name, email, role, and department
 * Multi-select department filter
-* Sortable-like display (not actual sorting yet, but designed to allow it)
-* Paginated table
-* Smooth scrolling using a virtualized table body
-* CSV and JSON exporters
+* Clear-all option
 
-### ✔ Dashboard-style UI/UX
+---
 
-The styles are custom-built (no external CSS libraries).
-The layout uses soft shadows, subtle gradients, glass-like surface effects and a dark admin-panel feel.
+### **• Virtualized Table**
+
+The table uses virtual scrolling, which renders only visible rows.
+This keeps the interface smooth and responsive even with large datasets.
+
+---
+
+### **• Pagination**
+
+* Configurable page size
+* Next/previous navigation
+* Fully synced with search and filtering
+
+---
+
+### **• Data Export**
+
+Export the current view (including filters) as:
+
+* **CSV**
+* **JSON**
+
+---
+
+### **• Clean, modern UI**
+
+* Dark dashboard-style interface
+* Sticky table headers
+* Role badges, avatars, and subtle animations
+* Fully responsive layout
 
 ---
 
@@ -59,139 +73,144 @@ The layout uses soft shadows, subtle gradients, glass-like surface effects and a
 ```
 employee-management-system/
 ├── index.html
-├── css/
-│   └── styles.css
+├── README.md
+├── favicon.ico
+├── assets/
+│   └── screenshot.png
 ├── api-data/
 │   └── employees.json
-├── js/
-│   ├── app.js
-│   ├── api/
-│   │   └── EmployeeAPI.js
-│   ├── models/
-│   │   ├── Employee.js
-│   │   └── EmployeeCollection.js
-│   ├── services/
-│   │   └── DataService.js
-│   ├── components/
-│   │   ├── TableComponent.js
-│   │   ├── SearchComponent.js
-│   │   └── PaginationComponent.js
-│   └── utils/
-│       └── helpers.js
-└── README.md
+├── css/
+│   └── styles.css
+└── js/
+    ├── app.js
+    ├── api/
+    │   └── EmployeeAPI.js
+    ├── components/
+    │   ├── SearchComponent.js
+    │   ├── TableComponent.js
+    │   └── PaginationComponent.js
+    ├── models/
+    │   ├── Employee.js
+    │   └── EmployeeCollection.js
+    ├── services/
+    │   └── DataService.js
+    └── utils/
+        └── helpers.js
 ```
 
-### A quick summary of the modules
+Each folder contains one responsibility:
 
-| Layer          | Description                                                |
-| -------------- | ---------------------------------------------------------- |
-| **API**        | Fetches data from remote source and handles local fallback |
-| **Models**     | Normalizes employee data and handles filtering logic       |
-| **Services**   | Middle layer that connects API + Models                    |
-| **Components** | Search, table (virtual scrolling), pagination              |
-| **Utils**      | Debounce, CSV/JSON export, small DOM helpers               |
+### **`api/`**
+
+Handles external and fallback data fetching.
+
+### **`models/`**
+
+Defines the Employee class and collection logic (filtering, normalizing data).
+
+### **`services/`**
+
+Coordinates between the API and the UI components.
+
+### **`components/`**
+
+Self-contained UI components:
+
+* Search panel
+* Pagination controls
+* Virtual scrolling table
+
+### **`utils/`**
+
+Small reusable helper functions (debounce, CSV export, DOM helpers).
 
 ---
 
-## Running the Project Locally
+## How to Run the Project Locally
 
-Because this is an ES module project, it must be served over HTTP (not opened directly as a file).
-Any simple static server works.
+Because the application uses ES modules and the Fetch API, it must be served over **a local web server**.
+Opening `index.html` directly will not work.
 
-### Option 1: VSCode Live Server (easiest)
-
-1. Open the project in VSCode
-2. Install “Live Server” extension (if not already installed)
-3. Right-click on **index.html** → *Open with Live Server*
-4. Browser will open automatically
-
-This is the most convenient method during development.
+Choose any of the following methods:
 
 ---
 
-### Option 2: Node.js
+### **Option 1 — VSCode Live Server (Recommended)**
 
-If you have Node installed:
+1. Open the project folder in Visual Studio Code
+2. Install the **Live Server** extension (if not already installed)
+3. Right-click on `index.html`
+4. Click **“Open with Live Server”**
+5. The project will open in your browser
+
+---
+
+### **Option 2 — Node.js**
+
+If Node is installed:
 
 ```bash
 npx serve
 ```
 
-Then open the URL printed in your terminal
-(e.g. `http://localhost:3000`).
+Then open the local URL printed in your terminal.
 
 ---
 
-### Option 3: Python
+### **Option 3 — Python**
+
+If Python 3 is installed:
 
 ```bash
-python -m http.server 8000
+python -m http.server
 ```
 
 Then open:
 
-`http://localhost:8000/employee-management/`
+```
+http://localhost:8000
+```
 
 ---
 
-## Deploying to Vercel
+## Using the Application
 
-The project is completely static, so deployment is very simple.
+Once the project runs:
 
-### How to deploy
+### **1. Browse the employee list**
 
-1. Push the project to GitHub
-2. Go to the Vercel dashboard
-3. Click **New Project**
-4. Import your GitHub repository
-5. For **Framework Preset**, choose **“Other”**
-6. For **Root Directory**, select the project folder if needed
-7. For **Build Command**, leave it empty (no build step required)
-8. For **Output Directory**, use:
+Employees are loaded automatically from the API or fallback data.
 
-   ```
-   .
-   ```
-9. Deploy
+### **2. Search**
 
-Vercel will give you a live URL such as:
+Use the search bar to filter by:
 
-```
-https://employee-management.vercel.app
-```
+* Name
+* Email
+* Role
+* Department
 
-This URL can be shared directly.
+(Searching is live and debounced for smooth typing.)
 
-### Deploying via CLI (optional)
+### **3. Filter by department**
 
-If you prefer the terminal:
+Use the multi-select field on the right.
 
-```bash
-npm i -g vercel
-cd employee-management
-vercel
-```
+### **4. Pagination**
 
-Follow the prompts, and you’re done.
+Select page size or move between pages.
+
+### **5. Export**
+
+Use the buttons in the top-right:
+
+* Export filtered results as **CSV**
+* Export filtered results as **JSON**
 
 ---
 
-## Notes for Reviewers
+## Notes
 
-This project intentionally avoids frameworks to demonstrate:
-
-* Strong understanding of browser APIs
-* Ability to structure applications without React/Vue
-* Clean architecture and separation of concerns
-* Performance considerations (virtual scrolling)
-* Practical UX design decisions
-
-It is easy to extend the project with features such as sorting, editing rows, column customization, or routing.
-
----
-
-## Final Thoughts
-
-The solution balances clarity, structure, and interactivity without relying on third-party libraries. It is built to be understandable at a glance while still showing good engineering discipline.
-
-If you’d like additional enhancements (sorting, inline editing, user detail modal, animations, or theming), the architecture is ready for it.
+* The project does not use any frameworks or external libraries.
+* It is designed to be easy to extend with new features.
+* The codebase follows clean separation of concerns and is structured for clarity.
